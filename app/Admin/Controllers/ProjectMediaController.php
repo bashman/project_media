@@ -81,13 +81,13 @@ class ProjectMediaController extends AdminController
             '4' => 'pdf',
             '5' => 'word',
             '6' => 'power',
-        ]);
+        ])->setWidth(3,2);
 
         $form->textarea('description', __('Descripción'));
        // $form->image('path', 'path');
-        $form->file('path', 'Archivo')->uniqueName();
+        $form->file('path', 'Archivo')->uniqueName()->setWidth(3,2);
         //$form->text('path', __('Path'));
-        $form->switch('ective', __('Activo'))->default(1);
+        $form->switch('active', __('Activo'))->default(1);
 
         return $form;
     }
