@@ -53,7 +53,7 @@ class ProjectFileController extends Controller
                 'title' => 'ERROR...',
                 'message' => 'Proyecto inexistente. ',
             ]);
-            return back()->with(compact('error'));
+            return back()->with(admin_toastr('PROYECTO NO ENCONTRADO...', 'error', ['timeOut' => 6000]));
         }
 
         $fileObject = ProjectMedia::where('project_id', $id)->get();
