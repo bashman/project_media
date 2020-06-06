@@ -72,7 +72,7 @@ class ProjectMediaController extends AdminController
         $form = new Form(new ProjectMedia());
 
         //$form->number('project_id', __('Project id'));
-        $form->text('name', __('Nombre'))->set;
+        $form->text('name', __('Nombre'))->setWidth(3,2);
 
         $form->select('type', __('Tipo'))->options([
             '1' => 'Audio',
