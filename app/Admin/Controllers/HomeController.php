@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
+use App\Custom\GetProjects;
 
 class HomeController extends Controller
 {
@@ -15,19 +16,19 @@ class HomeController extends Controller
         return $content
             ->title('Dashboard')
             ->description('Description...')
-            ->row(Dashboard::title())
+            ->row(GetProjects::title())
             ->row(function (Row $row) {
 
                 $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::environment());
+                  $column->append('&nbsp;' );
                 });
 
                 $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::extensions());
+                    $column->append(getProjects::getProject());
                 });
 
                 $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::dependencies());
+                $column->append('&nbsp;');
                 });
             });
     }

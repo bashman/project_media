@@ -508,6 +508,10 @@ class ComposerStaticInit061dae935d14a4df50e0d7e3e2e060f8
     );
 
     public static $classMap = array (
+        'AdminTablesSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminTablesSeeder.php',
+        'AdminUsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminUsersTableSeeder.php',
+        'App\\AdminUser' => __DIR__ . '/../..' . '/app/AdminUser.php',
+        'App\\AdminUserProject' => __DIR__ . '/../..' . '/app/AdminUserProject.php',
         'App\\Admin\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Admin/Controllers/AuthController.php',
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
@@ -516,6 +520,7 @@ class ComposerStaticInit061dae935d14a4df50e0d7e3e2e060f8
         'App\\Admin\\Controllers\\ProjectMediaController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ProjectMediaController.php',
         'App\\Admin\\Controllers\\ProjectTagController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ProjectTagController.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Custom\\GetProjects' => __DIR__ . '/../..' . '/app/Custom/GetProjects.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -531,7 +536,6 @@ class ComposerStaticInit061dae935d14a4df50e0d7e3e2e060f8
         'App\\ProjectCategory' => __DIR__ . '/../..' . '/app/ProjectCategory.php',
         'App\\ProjectMedia' => __DIR__ . '/../..' . '/app/ProjectMedia.php',
         'App\\ProjectTag' => __DIR__ . '/../..' . '/app/ProjectTag.php',
-        'App\\ProjectUser' => __DIR__ . '/../..' . '/app/ProjectUser.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

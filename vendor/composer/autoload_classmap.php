@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdminTablesSeeder' => $baseDir . '/database/seeds/AdminTablesSeeder.php',
+    'AdminUsersTableSeeder' => $baseDir . '/database/seeds/AdminUsersTableSeeder.php',
+    'App\\AdminUser' => $baseDir . '/app/AdminUser.php',
+    'App\\AdminUserProject' => $baseDir . '/app/AdminUserProject.php',
     'App\\Admin\\Controllers\\AuthController' => $baseDir . '/app/Admin/Controllers/AuthController.php',
     'App\\Admin\\Controllers\\ExampleController' => $baseDir . '/app/Admin/Controllers/ExampleController.php',
     'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
@@ -14,6 +18,7 @@ return array(
     'App\\Admin\\Controllers\\ProjectMediaController' => $baseDir . '/app/Admin/Controllers/ProjectMediaController.php',
     'App\\Admin\\Controllers\\ProjectTagController' => $baseDir . '/app/Admin/Controllers/ProjectTagController.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Custom\\GetProjects' => $baseDir . '/app/Custom/GetProjects.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -29,7 +34,6 @@ return array(
     'App\\ProjectCategory' => $baseDir . '/app/ProjectCategory.php',
     'App\\ProjectMedia' => $baseDir . '/app/ProjectMedia.php',
     'App\\ProjectTag' => $baseDir . '/app/ProjectTag.php',
-    'App\\ProjectUser' => $baseDir . '/app/ProjectUser.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

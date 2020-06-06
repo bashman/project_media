@@ -71,13 +71,23 @@ class ProjectMediaController extends AdminController
     {
         $form = new Form(new ProjectMedia());
 
-        $form->number('project_id', __('Project id'));
-        $form->text('name', __('Name'));
-        $form->textarea('description', __('Description'));
+        //$form->number('project_id', __('Project id'));
+        $form->text('name', __('Nombre'))->set;
+
+        $form->select('type', __('Tipo'))->options([
+            '1' => 'Audio',
+            '2' => 'Fotos',
+            '3' => 'Video',
+            '4' => 'pdf',
+            '5' => 'word',
+            '6' => 'power',
+        ]);
+
+        $form->textarea('description', __('Descripción'));
        // $form->image('path', 'path');
-        $form->file('path', 'path')->uniqueName();
+        $form->file('path', 'Archivo')->uniqueName();
         //$form->text('path', __('Path'));
-        $form->switch('ective', __('Ective'))->default(1);
+        $form->switch('ective', __('Activo'))->default(1);
 
         return $form;
     }

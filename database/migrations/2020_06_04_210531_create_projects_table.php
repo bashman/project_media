@@ -15,9 +15,6 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->index();
-            $table->foreign('user_id')->references('id')->on('admin_users');
-
             $table->string('name')->index();
             $table->bigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('project_categories')->cascadeOnDelete();

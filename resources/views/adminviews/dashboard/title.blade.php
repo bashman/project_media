@@ -1,6 +1,6 @@
 <style>
     .title {
-        font-size: 50px;
+        font-size: 40px;
         color: #636b6f;
         font-family: 'Raleway', sans-serif;
         font-weight: 100;
@@ -26,10 +26,6 @@
 </style>
 
 <div class="title">
-    Laravel-admin
+    SISTEMA DE VISUALIZACIÓN DE PROYECTOS
 </div>
-<div class="links">
-    <a href="https://github.com/z-song/laravel-admin" target="_blank">Github</a>
-    <a href="http://laravel-admin.org/docs"  target="_blank">Documentation</a>
-    <a href="http://laravel-admin.org/demo"  target="_blank">Demo</a>
-</div>
+

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Encore\Admin\Auth\Database\Administrator;
 use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
@@ -10,4 +11,11 @@ class Project extends Model
     {
         return $this->hasMany(ProjectMedia::class, 'project_id');
     }
+
+
+
+    public  function users() {
+        return $this->belongsToMany(AdminUser::class)->withTimestamps();
+    }
+
 }
