@@ -12,6 +12,7 @@
                 @foreach($projectObject as $env)
                 <tr>
                     <td id="{{ $env['id'] }}" width="100%"><a href="/admin/project-files/{{ $env['id'] }}">{{ $env['name'] }}</a></td>
+                    <td id="{{ $env['id'] }}" width="100%"><a href="/admin/project-files/5">{{ $env['name'] }}</a></td>
 
                 </tr>
                 @endforeach

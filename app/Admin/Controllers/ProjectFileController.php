@@ -11,7 +11,7 @@ use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\MessageBag;
 
 
 class ProjectFileController extends Controller
@@ -45,11 +45,20 @@ class ProjectFileController extends Controller
     public function cont($id)
     {
         $arr = [];
+
+        $project = Project::find($id);
+
+        if($project  == null) {
+            $error = new MessageBag([
+                'title' => 'ERROR...',
+                'message' => 'Proyecto inexistente. ',
+            ]);
+            return back()->with(compact('error'));
+        }
+
         $fileObject = ProjectMedia::where('project_id', $id)->get();
 
-       // dump($fileObject);
         if (count($fileObject) > 0 ){
-            $project = Project::findOrFail($id);
 
             foreach ($fileObject as $file) {
                 if ($file->type == "1")//audio
