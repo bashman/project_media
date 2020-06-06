@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Project;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -70,10 +71,10 @@ class ProjectMediaController extends AdminController
     protected function form()
     {
         $form = new Form(new ProjectMedia());
-
+        $form->select('project_id', __('Proyecto'))->options(Project::all()->pluck('name', 'id'))
+            ->setWidth(3,2)->required();
         //$form->number('project_id', __('Project id'));
         $form->text('name', __('Nombre'))->setWidth(3,2);
-
         $form->select('type', __('Tipo'))->options([
             '1' => 'Audio',
             '2' => 'Fotos',
